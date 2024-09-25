@@ -10,6 +10,7 @@ import { ParentComponent } from './parent/parent.component';
 import { BonbonComponent } from './bonbon/bonbon.component';
 import { SelComponent } from './sel/sel.component';
 import { CaramelComponent } from './caramel/caramel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CaramelComponent } from './caramel/caramel.component';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule
 
   ],
   providers: [],
