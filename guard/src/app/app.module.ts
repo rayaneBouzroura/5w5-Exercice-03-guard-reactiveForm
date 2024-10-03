@@ -11,6 +11,7 @@ import { BonbonComponent } from './bonbon/bonbon.component';
 import { SelComponent } from './sel/sel.component';
 import { CaramelComponent } from './caramel/caramel.component';
 import { FormsModule } from '@angular/forms';
+import { EauComponent } from './eau/eau.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     ParentComponent,
     BonbonComponent,
     SelComponent,
-    CaramelComponent
+    CaramelComponent,
+    EauComponent
   ],
   imports: [
     BrowserModule,

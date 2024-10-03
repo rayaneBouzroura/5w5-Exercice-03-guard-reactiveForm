@@ -4,13 +4,16 @@ import { ParentComponent } from './parent/parent.component';
 import { BonbonComponent } from './bonbon/bonbon.component';
 import { SelComponent } from './sel/sel.component';
 import { CaramelComponent } from './caramel/caramel.component';
+import { EauComponent } from './eau/eau.component';
+import { apiGuard } from './api.guard';
 
 const routes: Routes = [
   {
     path: '', component: ParentComponent, children: [
       { path: 'bonbon', component: BonbonComponent },
       { path: 'sel', component: SelComponent },
-      { path: 'caramelAuSel', component: CaramelComponent },
+      { path: 'caramelAuSel', component: CaramelComponent , canActivate : [apiGuard] },
+      {path :'eau', component:EauComponent}
 
 
     ]
