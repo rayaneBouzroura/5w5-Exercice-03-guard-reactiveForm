@@ -1,0 +1,21 @@
+<mat-card class="artist-card" style="width: 50%;">
+  <form [formGroup]="form">
+
+    <mat-form-field style="width: 100%;">
+      <label> fav pet?</label>
+      <input matInput placeholder="repond par dog" formControlName="questionA" name="questionA" type="text">
+      <mat-error *ngIf="form.get('questionA')?.errors?.['doesntLoveDogs']"> ew</mat-error>
+      <mat-error *ngIf="form.get('questionA')?.hasError('required')"> ceci est obligatoire</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+      <label> say yes</label>
+      <input matInput placeholder="say yes" formControlName="questionB" name="questionB" type="text">
+      <mat-error *ngIf="form.get('questionB')?.errors?.['didntSayYes']"> ew</mat-error>
+      <mat-error *ngIf="form.get('questionB')?.hasError('required')"> ceci est obligatoire</mat-error>
+
+
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!form.valid">Enregistrer</button>
+  </form>
+</mat-card>
+
